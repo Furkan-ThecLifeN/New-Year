@@ -1,9 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+/* Webkit tarayıcıları (Chrome, Safari, Edge) için */
+::-webkit-scrollbar {
+  width: 12px; /* Scroll çubuğunun genişliğini ayarlayın */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000; /* Scroll çubuğu arka plan rengi */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00bfff; /* Scroll çubuğu parmağı rengi */
+  border-radius: 10px; /* Opsiyonel: Parmak için yuvarlak köşeler */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff0000; /* Parmağın üzerine gelindiğinde renk değişir */
+}
+
+
+body {
+  background-color: #ffffff;
+}
+
   .wrapper,
   .content {
     position: relative;
@@ -18,6 +43,9 @@
   .content .section {
     width: 100%;
     height: 100vh;
+    margin-bottom: 150px;
+    border-radius: 12px;
+    border: 2px solid #fff;
   }
   
   .content .section.hero {
@@ -46,9 +74,123 @@
     object-position: center center;
   }
 
-  .first-section {
+  .muzik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
     width: 100%;
-    height: 100vh; /* Tam ekran yüksekliği */
-    overflow: hidden; /* Gereksiz kaydırma çubuklarını gizler */
+    height: 100vh;
+  }
+
+  .muzik button:hover {
+    background-color: #00bfff;
+    color: #ffffff;
+  }
+
+  .first-section {
+    background-image: url('./new-year.jpg'); /* Fotoğrafın yolu */
+    background-size: cover; /* Fotoğrafın section'ı tamamen kaplamasını sağlar */
+    background-position: center; /* Fotoğrafı ortalar */
+    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmamasını sağlar */
+    background-image: url('./new-year.jpg'); /* Fotoğrafın yolu */
+    background-size: cover; /* Fotoğrafın section'ı tamamen kaplamasını sağlar */
+    background-position: center; /* Fotoğrafı ortalar */
+    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmamasını sağlar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden; /* İçeriğin kaymasını engeller */
   }
   
+  .second-section {
+    background-image: url('./new-year2.jpg'); /* Fotoğrafın yolu */
+    background-size: cover; /* Fotoğrafın section'ı tamamen kaplamasını sağlar */
+    background-position: center; /* Fotoğrafı ortalar */
+    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmamasını sağlar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .thirst-section {
+    background-image: url('./new-year3.jpg'); /* Fotoğrafın yolu */
+    background-size: cover; /* Fotoğrafın section'ı tamamen kaplamasını sağlar */
+    background-position: center; /* Fotoğrafı ortalar */
+    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmamasını sağlar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .fourth-section {
+    background-image: url('./new-year4.jpg'); /* Fotoğrafın yolu */
+    background-size: cover; /* Fotoğrafın section'ı tamamen kaplamasını sağlar */
+    background-position: center; /* Fotoğrafı ortalar */
+    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmamasını sağlar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+  } 
+
+  .new-year-btn {
+    padding: 15px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 3px solid #fff;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .new-year-btn:hover {
+    background-color: #00bfff;
+    text-decoration: none;
+  }
+
+  .footer-section {
+    background-color: #ff0000;
+    color: #fff; /* Yazı rengi beyaz */
+    text-align: center; /* Metni ortala */
+    padding: 20px; /* İçerik etrafında boşluk */
+}
+
+.footer-section h1 {
+    margin: 0; /* Varsayılan boşlukları sıfırla */
+    font-size: 1.8rem; /* Başlık boyutu */
+}
+
+section p {
+  padding: 15px;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 30px;
+  font-family: "Playwrite AU SA", serif;
+  font-weight: 400;
+  font-size: large;
+  margin: 50px;
+}
