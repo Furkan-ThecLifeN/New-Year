@@ -1,0 +1,62 @@
+html, body {
+  overflow: hidden;
+  background: black;
+  cursor: crosshair;
+}
+
+.controls {
+  bottom: 0;
+  display: flex;
+  opacity: 0.8;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  z-index: 2;
+}
+.controls__label {
+  border: 1px solid #6a1b9a;
+  cursor: pointer;
+  display: block;
+  height: 36px;
+  margin-left: 16px;
+  padding: 0 16px;
+  border-radius: 17px;
+}
+.controls__rdo {
+  display: none;
+}
+.controls__rdo:checked + .controls__label {
+  background-color: #6a1b9a;
+}
+.controls__icon {
+  align-items: center;
+  display: block;
+}
+.controls__icon--line, .controls__icon--dot-line {
+  position: relative;
+  top: calc(50% - 1px);
+}
+.controls__icon--dot {
+  position: relative;
+  transform: translateY(calc(50% + 1px));
+}
+.controls__icon--line, .controls__icon--dot-line {
+  background-color: white;
+  height: 1px;
+  width: 16px;
+}
+.controls__icon--dot-line {
+  position: relative;
+}
+.controls__icon--dot-line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  transform: translateY(calc(-50% + 1px));
+}
+.controls__icon--dot, .controls__icon--dot-line:after {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
